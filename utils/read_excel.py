@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 '''
 @author: lingshu
 @file: read_excel.py
@@ -7,8 +8,10 @@
 '''
 import xlrd
 from utils import get_file_path
+
+
 def read_excel():
-    file_path = get_file_path.get_root_path()+'testdata\\testdata.xlsx'
+    file_path = get_file_path.get_root_path()+'\\testdata\\testdata.xlsx'
     # 文件位置
     excel_file=xlrd.open_workbook(file_path)
 
@@ -26,15 +29,17 @@ def read_excel():
     print(rows)
     print(cols)
 
-    #获取单元格内容
+
+# 获取单元格内容
     print("第二行第一列的值为： %s",sheet.cell(1,0))
 
     # 打印单元格内容格式
     print("单元格内容格式为： %s",sheet.cell(0,0).ctype)
 
+
 def get_xls():
     cls = []
-    file_path = get_file_path.get_root_path() + 'testdata\\testdata.xlsx'
+    file_path = get_file_path.get_root_path() + '\\testdata\\testdata.xlsx'
     # 文件位置
     excel_file = xlrd.open_workbook(file_path)
     sheet = excel_file.sheet_by_name('Sheet1')
@@ -42,5 +47,7 @@ def get_xls():
     for i in range(nrows):
         cls.append(sheet.row_values(i))
     return cls
+
+
 if __name__ == '__main__':
     print(get_xls())

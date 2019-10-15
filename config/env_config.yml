@@ -1,2 +1,20 @@
 host:
-  url: https://postman-echo.com/time/before
+  url: http://192.168.0.156
+Login_url:
+  lurl: /audit-core/login/checkLogin.do
+Login_data:
+  username: webadmin
+  password: webadmin123456
+  vcode: wannengyanzhengma
+
+unclear_search_url:
+  unurl: /audit-core/fullTextRetrieval/analyze.do
+unclear_search_data:
+  text: ""
+
+list_Data:
+  ld: /audit-core/fullTextRetrieval/listData.do
+ld_data:
+  page: "1"
+  limit: "10"
+  params: '{"startDate":"20190916","endDate":"20191014","type":1,"text":"","isFile":0,"field":"timestamp","sort":1}'
