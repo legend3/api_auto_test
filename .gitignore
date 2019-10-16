@@ -104,6 +104,7 @@ venv.bak/
 .mypy_cache/
 /READMD
 /config/READMD
-/README.md
 
 /Report/allure-results/
+.idea/.name
+.idea/Application.iml
