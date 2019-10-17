@@ -3,7 +3,7 @@
 ## 技术栈：
 - python3 、pytest、Requests
 - Allure
-- Jenkins
+- Jenkins   ——部署(项目所在地)jenkins,
 
 ## 测试接口介绍
 本例使用Postman自带的一个接口来做测试，url如下：

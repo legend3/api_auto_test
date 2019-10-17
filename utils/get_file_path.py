@@ -1,9 +1,7 @@
 # encoding: utf-8
 
 '''
-@author: lingshu
-@file: get_file_path.py
-@time: 2019/6/21 17:09
+@author: legend
 @desc: 获取文件路径
 '''
 

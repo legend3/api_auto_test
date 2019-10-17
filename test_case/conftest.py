@@ -45,3 +45,23 @@ def env_config():
 #     result_login = r.json()
 #     assert str(result_login['success']) == 'True'
 #     return dict(JSESSIONID=cookie['JSESSIONID'])
+@pytest.fixture(scope='session', name='jsessionid')
+def full_text(env_config):
+    """Connect to server before testing, util after."""
+    # Setup : start login
+    url = env_config['host']['url'] + env_config['Login_url']['lurl']
+    loginparams = {'username': env_config['Login_data']['username'], 'password': env_config['Login_data']['password'],
+                   'vcode': env_config['Login_data']['vcode']}
+
+    # session = requests.sessions()
+    r = requests.post(url, params=loginparams)
+    # print(r.url)
+    cookie = r.cookies.get_dict()
+    result_login = r.json()
+    jsessionid = dict({'JSESSIONID': cookie['JSESSIONID']})
+    assert str(result_login['success']) == 'True'
+
+    yield jsessionid  # 此处开始执行测试用例且传递setup之前的数据到test
+
+    # Teardown : over
+    pytest.exit('测试结束！')
