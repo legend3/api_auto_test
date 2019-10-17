@@ -22,5 +22,5 @@ if __name__ == "__main__":
 但在正常导入test_script导入时则执行test_script.
 '"""
 if __name__ == '__main__':
-    args = ['-s', '-v', './test_case/test_FullText/test_Full_Text_Search.py', '--alluredir', './Report/html/allure-result']
+    args = ['-s', '-v', './test_case/test_FullText/test_Full_Text_Search.py']  # '--alluredir', './Report/html/allure-result'
     pytest.main(args)
