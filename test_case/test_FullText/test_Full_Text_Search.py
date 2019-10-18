@@ -5,7 +5,7 @@ import pytest
 
 @allure.feature('full-text')
 @allure.story('unclear')
-@allure.severity('B')
+@allure.severity('B')  # 要根据严重程度来标记测试，可以使用@allure。严重性装饰。这很有诱惑力。severity_level枚举值作为参数
 def test_unclear_search(env_config, jsessionid):
     """全文模糊查询"""
     url = env_config['host']['url'] + env_config['unclear_search_url']['unurl']

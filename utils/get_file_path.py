@@ -8,7 +8,7 @@
 
 import os
 
-project_name="api_auto_test"
+project_name = "Application"
 
 
 def get_root_path():
